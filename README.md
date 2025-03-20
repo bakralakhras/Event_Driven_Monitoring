@@ -49,8 +49,6 @@ This project is an **AI-powered incident response system** that detects anomalie
 4️⃣ **If auto-remediation is needed, FastAPI executes commands** (e.g., killing a process, restarting a service).\
 5️⃣ **Incident results are sent to Slack for visibility**.
 
-🖼 **Placeholder for Incident Response Flow Diagram**\
-(Replace with a Draw\.io diagram showing the step-by-step alert processing.)
 
 ---
 
