@@ -96,5 +96,5 @@ MIT License - Feel free to use and modify!
 ## 👨‍💻 **Author**
 
 **Baker Alakhras**\
-[GitHub](https://github.com/bakralakhras) • [LinkedIn](https://linkedin.com/in/bakr-alakhras)
+[GitHub](https://github.com/bakralakhras) • [LinkedIn](https://linkedin.com/in/bakr-alakhras) • [Portfolio](https://bakralakhras.github.io/portfolio/)
 
