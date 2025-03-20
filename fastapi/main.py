@@ -97,7 +97,7 @@ def send_to_slack(incident: Incident, ai_suggestion: str, remediation_result: st
         logging.info(f"Slack Response Body: {response.text}")
 
         if response.status_code == 200:
-            logging.info("✅ Incident successfully sent to Slack.")
+            logging.info("Incident successfully sent to Slack.")
         else:
             logging.error(f"Failed to send incident to Slack: {response.text}")
 
