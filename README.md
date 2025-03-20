@@ -36,7 +36,8 @@ This project is an **AI-powered incident response system** that detects anomalie
 
 ## 📊 **System Architecture**
 
-![Diagram]()
+![AI_incident_Native](https://github.com/user-attachments/assets/bfd093dd-0a12-482b-92e6-00397cccedc6)
+
 
 ---
 
