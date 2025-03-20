@@ -1,3 +1,6 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/bakralakhras/portfolio?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/bakralakhras/portfolio?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/bakralakhras/portfolio?style=flat-square)
 # AI-Powered Incident Responder (Native Solution)
 
 🚀 **Automated AI-Assisted Incident Response System** – A project designed to detect, analyze, and automatically remediate system issues using **Prometheus, Alertmanager, FastAPI, and AI-powered troubleshooting**. This version is a **local deployment using Docker Compose**, with plans to scale it into a **cloud-native solution on Azure Kubernetes Service (AKS).**
