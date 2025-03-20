@@ -12,11 +12,11 @@ load_dotenv()
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
-logging.info(f"🔍 SLACK_WEBHOOK_URL: {SLACK_WEBHOOK_URL if SLACK_WEBHOOK_URL else '❌ MISSING'}")
+logging.info(f"SLACK_WEBHOOK_URL: {SLACK_WEBHOOK_URL if SLACK_WEBHOOK_URL else 'MISSING'}")
 
 cohere_api_key = os.getenv("COHERE_API_KEY")
 if not cohere_api_key:
-    logging.error("❌ COHERE_API_KEY is missing!")
+    logging.error("COHERE_API_KEY is missing!")
 
 client = cohere.Client(cohere_api_key)
 
@@ -40,12 +40,11 @@ def generate_ai_response(description: str):
         return "Error: Failed to generate AI response."
 
 def should_remediate(alert_description: str, ai_suggestion: str):
-    """Determine if auto-remediation should be triggered based on alert and AI suggestion"""
-    # CPU-related issues
+   
+  
     if "cpu" in alert_description.lower() or "cpu" in ai_suggestion.lower():
         return True
-    
-    # Service-related issues that need restart
+
     if any(phrase in ai_suggestion.lower() for phrase in ["restart service", "restart the service", "service restart"]):
         return True
         
@@ -134,17 +133,15 @@ async def receive_incident(request: Request):
 
         description = incident.annotations.get("description", "No description provided.")
         
-        # Generate AI suggestion
         ai_suggestion = generate_ai_response(description)
         
-        # Check if auto-remediation is needed
+     
         remediation_result = None
         if should_remediate(description, ai_suggestion):
             logging.info(f"Auto-remediation needed for: {description}")
             remediation_result = auto_remediate(description, ai_suggestion)
 
         
-        # Send to Slack with remediation results if available
         send_to_slack(incident, ai_suggestion, remediation_result)
 
         processed_alerts.append({

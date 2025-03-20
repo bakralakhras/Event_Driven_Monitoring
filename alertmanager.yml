@@ -2,13 +2,12 @@ global:
   resolve_timeout: 1s
 
 route:
-  receiver: "multi-receiver"  # Route all alerts to both receivers
-  group_wait: 0s
+  receiver: "multi-receiver"  
   group_interval: 10s
   repeat_interval: 1m
 
 receivers:
   - name: "multi-receiver"
     webhook_configs:
-      - url: "http://fastapi:8000/incident"  # FastAPI
+      - url: "http://fastapi:8000/incident" 
         send_resolved: true
