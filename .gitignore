@@ -7,6 +7,8 @@ __pycache__/
 *.pyo
 .DS_Store
 
+node_exporter/
+
 venv/
 .venv/
 
