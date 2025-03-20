@@ -36,8 +36,7 @@ This project is an **AI-powered incident response system** that detects anomalie
 
 ## 📊 **System Architecture**
 
-🖼 **Placeholder for System Architecture Diagram**\
-(Replace with a Draw\.io diagram showing Prometheus → Alertmanager → FastAPI → AI → Slack.)
+![Diagram]()
 
 ---
 
